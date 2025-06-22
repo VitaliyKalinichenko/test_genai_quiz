@@ -190,14 +190,21 @@
             letter-spacing: 1px;
         }
 
-        .submit-btn:hover {
+        .submit-btn:hover:not(:disabled) {
             transform: translateY(-3px);
             box-shadow: 0 12px 24px rgba(40, 167, 69, 0.4);
             background: linear-gradient(135deg, #218838, #1dd1a1);
         }
 
-        .submit-btn:active {
+        .submit-btn:active:not(:disabled) {
             transform: translateY(0);
+        }
+
+        .submit-btn:disabled {
+            background: linear-gradient(135deg, #6c757d, #adb5bd);
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: 0 4px 8px rgba(108, 117, 125, 0.2);
         }
 
         .results {
@@ -354,6 +361,7 @@
                 <ul>
                     <li>Read each question carefully</li>
                     <li>Select your answer using the radio buttons</li>
+                    <li>Answer ALL questions before submitting</li>
                     <li>Click 'Submit Quiz' when you're done</li>
                     <li>You'll receive immediate feedback and your final score</li>
                 </ul>
@@ -647,18 +655,322 @@
                     </div>
                 </div>
 
-                <button class="submit-btn" onclick="submitQuiz()">🚀 Submit Quiz</button>
+                <!-- Task 6  -->
+                <div class="task-header">
+                    📝 Task 6 
+                </div>
+                <div class="task-description">
+                    <strong>Example Prompt:</strong> "You are a QA engineer. Create a test plan for the user registration functionality. Consider all edge cases, validation rules, and security aspects. Think step by step."
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">6. What prompt engineering technique is demonstrated in this example?</div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q6" value="0" data-correct="1">
+                            A) ELI5 (Explain Like I'm 5)
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q6" value="1" data-correct="1">
+                            B) Chain-of-thought
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q6" value="2" data-correct="1">
+                            C) Few-shot
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Task 7 -->
+                <div class="task-header">
+                    📝 Task 7 
+                </div>
+                <div class="task-description">
+                    <strong>Example Prompt:</strong> You are a QA engineer.
+Based on scenario:
+1. Identify two positive test cases.
+2. Identify two negative test cases.
+3. For each, list the main test steps. 
+
+&lt;SCENARIO&gt;
+Feature: Shopping Cart Quantity Update
+Steps:
+  1. User adds "Wireless Mouse" to the cart.
+  2. User changes quantity from 1 to 3.
+  3. Cart subtotal updates from $25.00 to $75.00.
+&lt;/SCENARIO&gt;  
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">7. What prompt engineering technique is demonstrated in this example?</div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q7" value="0" data-correct="2">
+                            A) Specify the steps
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q7" value="1" data-correct="2">
+                            B) Consider the output
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q7" value="2" data-correct="2">
+                            C) Delimiters
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Task 8  -->
+                <div class="task-header">
+                    📝 Task 8 
+                </div>
+                <div class="task-description">
+                    <strong>Example Prompt:</strong> "Act as a senior test automation engineer with 10 years of experience. Create a comprehensive test strategy for API testing of an e-commerce platform's payment processing system."
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">8. What prompt engineering technique is demonstrated in this example?</div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q8" value="0" data-correct="1">
+                            A) Zero shot
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q8" value="1" data-correct="1">
+                            B) Role prompting
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q8" value="2" data-correct="1">
+                            C) Be specific
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Task 9 -->
+                <div class="task-header">
+                    📝 Task 9 
+                </div>
+                <div class="task-description">
+                    <strong>Example Prompt:</strong> "Create test cases for login functionality. Here are two examples:<br><br>
+                    Example 1: Test ID: TC001, Title: Valid Login, Steps: 1. Enter valid email 2. Enter valid password 3. Click Login. Expected Result: User successfully logged in<br><br>
+                    Example 2: Test ID: TC002, Title: Invalid Email, Steps: 1. Enter invalid email format 2. Enter valid password 3. Click Login. Expected Result: Error message displayed<br><br>
+                    Now create similar test cases for the password reset functionality."
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">9. What prompt engineering technique is demonstrated in this example?</div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q9" value="0" data-correct="2">
+                            A) Zero shot
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q9" value="1" data-correct="2">
+                            B) Role prompting
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q9" value="2" data-correct="2">
+                            C) Few shot
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Task 10 -->
+                <div class="task-header">
+                    📝 Task 10 
+                </div>
+                <div class="task-description">
+                    <strong>Example Prompt:</strong> "Role: You are a senior QA engineer with expertise in mobile app testing.<br>
+                    Task: Create a comprehensive test plan for a mobile banking app's money transfer feature.<br>
+                    Format: Provide the test plan in a structured document with sections for: Test Objectives, Test Scenarios, Test Cases (with ID, Title, Steps, Expected Results), and Risk Assessment."
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">10. What prompt engineering framework is demonstrated in this example?</div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q10" value="0" data-correct="1">
+                            A) CRAFT
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q10" value="1" data-correct="1">
+                            B) RTF
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q10" value="2" data-correct="1">
+                            C) RISEN
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Task 11  -->
+                <div class="task-header">
+                    📝 Task 11 
+                </div>
+                <div class="task-description">
+                    <strong>Example Prompt:</strong> "Role: Act as an experienced test architect.<br>
+                    Instructions: Design a complete testing strategy for an e-commerce checkout process.<br>
+                    Steps: 1. Analyze the checkout flow 2. Identify test scenarios 3. Create detailed test cases 4. Define acceptance criteria<br>
+                    Expectation: Test strategy document .<br>
+                    Narrowing: Focus specifically on payment validation, user data validation, and error handling scenarios."
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">11. What prompt engineering framework is demonstrated in this example?</div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q11" value="0" data-correct="2">
+                            A) ReAct
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q11" value="1" data-correct="2">
+                            B) RACE
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q11" value="2" data-correct="2">
+                            C) RISEN
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Task 12  -->
+                <div class="task-header">
+                    📝 Task 12
+                </div>
+                <div class="task-description">
+                    <strong>Example Prompt:</strong> "Role: You are a senior automation test engineer.<br>
+                    Action: Create automated test scripts for user authentication system.<br>
+                    Context: The system handles login, logout, password reset, and account lockout functionality. It must be secure and user-friendly.<br>
+                    Expectation: Provide complete test automation framework setup with test cases covering all authentication scenarios, including edge cases and security testing."
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">12. What prompt engineering framework is demonstrated in this example?</div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q12" value="0" data-correct="0">
+                            A) RACE
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q12" value="1" data-correct="0">
+                            B) CRAFT
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q12" value="2" data-correct="0">
+                            C) ReAct
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Task 13 -->
+                <div class="task-header">
+                    📝 Task 13
+                </div>
+                <div class="task-description">
+                    <strong>Example Prompt:</strong> "Character: You are an expert performance testing specialist.<br>
+                    Request: Design a comprehensive performance testing strategy for a social media platform.<br>
+                    Examples: Include load testing, stress testing, and scalability testing scenarios.<br>
+                    Adjustments: Consider peak traffic times, user behavior patterns, and system resource limitations.<br>
+                    Type of output: Detailed performance testing plan with test scenarios, success criteria, and monitoring metrics.<br>
+                    Extras: Include recommendations for performance optimization and bottleneck identification."
+                </div>
+                
+                <div class="question">
+                    <div class="question-title">13. What prompt engineering framework is demonstrated in this example?</div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q13" value="0" data-correct="1">
+                            A) RTF
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q13" value="1" data-correct="1">
+                            B) CREATE
+                        </label>
+                    </div>
+                    <div class="option">
+                        <label>
+                            <input type="radio" name="q13" value="2" data-correct="1">
+                            C) RISEN
+                        </label>
+                    </div>
+                </div>
+
+                <button class="submit-btn" id="submitBtn" onclick="submitQuiz()" disabled>🚀 Submit Quiz</button>
             </div>
             
             <div id="results" style="display: none;"></div>
         </div>
         
         <div class="footer">
-            <p>📚 Quiz Topic: GenAI Prompt Engineering for Testing | Total Questions: 10</p>
+            <p>📚 Quiz Topic: GenAI Prompt Engineering for Testing | Total Questions: 13</p>
         </div>
     </div>
 
     <script>
+        // Check if all questions are answered
+        function checkAllAnswered() {
+            const totalQuestions = 13;
+            const questionNames = ['q1_1', 'q1_2', 'q2_1', 'q2_2', 'q3_1', 'q3_2', 'q4_1', 'q4_2', 'q5_1', 'q5_2', 'q6', 'q7', 'q8', 'q9', 'q10', 'q11', 'q12', 'q13'];
+            
+            let answeredCount = 0;
+            questionNames.forEach(name => {
+                const radios = document.querySelectorAll(`input[name="${name}"]`);
+                for (let radio of radios) {
+                    if (radio.checked) {
+                        answeredCount++;
+                        break;
+                    }
+                }
+            });
+            
+            const submitBtn = document.getElementById('submitBtn');
+            if (answeredCount === questionNames.length) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = '🚀 Submit Quiz';
+            } else {
+                submitBtn.disabled = true;
+                submitBtn.textContent = `🚀 Submit Quiz (${answeredCount}/${questionNames.length} answered)`;
+            }
+        }
+
+        // Add event listeners to all radio buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            const allRadios = document.querySelectorAll('input[type="radio"]');
+            allRadios.forEach(radio => {
+                radio.addEventListener('change', checkAllAnswered);
+            });
+            checkAllAnswered(); // Initial check
+        });
+
         function submitQuiz() {
             const form = document.getElementById('quiz-form');
             const resultsDiv = document.getElementById('results');
@@ -678,7 +990,15 @@
                 'q4_1': ['A) use', 'B) remove', 'C) think'],
                 'q4_2': ['A) section', 'B) format', 'C) prompt'],
                 'q5_1': ['A) You are a prompt engineer', 'B) You are a senior QC engineer (or "Act as a senior QC engineer")', 'C) You are the best'],
-                'q5_2': ['A) Table (or tabular)', 'B) Interview', 'C) mp3']
+                'q5_2': ['A) Table (or tabular)', 'B) Interview', 'C) mp3'],
+                'q6': ['A) ELI5 (Explain Like I\'m 5)', 'B) Chain-of-thought', 'C) Few-shot'],
+                'q7': ['A) Specify the steps', 'B) Consider the output', 'C) Delimiters'],
+                'q8': ['A) Zero shot', 'B) Role prompting', 'C) Be specific'],
+                'q9': ['A) Zero shot', 'B) Role prompting', 'C) Few shot'],
+                'q10': ['A) CRAFT', 'B) RTF', 'C) RISEN'],
+                'q11': ['A) ReAct', 'B) RACE', 'C) RISEN'],
+                'q12': ['A) RACE', 'B) CRAFT', 'C) ReAct'],
+                'q13': ['A) RTF', 'B) CREATE', 'C) RISEN']
             };
             
             // Get all radio button groups
@@ -772,10 +1092,11 @@
                     <div class="study-tips">
                         <h4>💡 Study Recommendations</h4>
                         <ul>
-                            <li>Review prompt engineering best practices</li>
-                            <li>Study the CRAFT framework for prompt construction</li>
-                            <li>Practice creating specific, structured prompts</li>
-                            <li>Focus on clear instruction writing for AI tools</li>
+                            <li>Review prompt engineering best practices and techniques</li>
+                            <li>Study the CRAFT, RTF, RISEN, RACE, and CREATE frameworks</li>
+                            <li>Practice Chain-of-thought, Few-shot, and Role prompting techniques</li>
+                            <li>Learn about using delimiters for better prompt structure</li>
+                            <li>Focus on creating specific, structured prompts for testing scenarios</li>
                         </ul>
                     </div>
                 `;
