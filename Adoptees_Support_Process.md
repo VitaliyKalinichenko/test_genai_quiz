@@ -34,7 +34,8 @@ This document describes the support process for **Adoptees (Associates and Exper
 - Assists the Pool Leader upon request.
 - Handles domain-specific and technical questions.
 - Keeps track of pool communications.
-- Acts as a backup when the Pool Leader or another Support is unavailable.
+- Acts as a backup when the Pool Leader or another Support is unavailable
+- Assists around questions about the curriculum or technical issues, review the relevant module documentation, complete assessments to test understanding, and engage with the learning community during group sessions.
 
 ---
 
